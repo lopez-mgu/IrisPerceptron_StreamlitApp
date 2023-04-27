@@ -47,11 +47,10 @@ with modelTraining:
                 'petal length (cm)': petal_length,
                 'petal width (cm)': petal_width}
         features = pd.DataFrame(data, index=[0])
-        #result_LR, result_SVC, result_DT, result_VC  = predict(features, model_option)
-        result_perceptron  = predict(features)
+        result_LR, result_SVC, result_DT, result_VC, result_perceptron  = predict(features)
         #iris_class = ['Iris-Setosa', 'Iris-Versicolour', 'Iris-Virginica']
-        #st.sidebar.markdown(f'Iris Type by Logistic Regression:  {iris.target_names[result_LR[0]]}')
-        #st.sidebar.markdown(f'Iris Type by SVC:  {iris.target_names[result_SVC[0]]}')
-        #st.sidebar.markdown(f'Iris Type by Desicion Trees:  {iris.target_names[result_DT[0]]}')
-        #st.sidebar.markdown(f'Iris Type by Voting Classifier:  {iris.target_names[result_VC[0]]}')
+        st.sidebar.markdown(f'Iris Type by Logistic Regression:  {iris.target_names[result_LR[0]]}')
+        st.sidebar.markdown(f'Iris Type by SVC:  {iris.target_names[result_SVC[0]]}')
+        st.sidebar.markdown(f'Iris Type by Desicion Trees:  {iris.target_names[result_DT[0]]}')
+        st.sidebar.markdown(f'Iris Type by Voting Classifier:  {iris.target_names[result_VC[0]]}')
         st.sidebar.markdown(f'Iris Type by Perceptron:  {iris.target_names[result_perceptron[0]]}')
